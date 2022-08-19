@@ -10,6 +10,6 @@ public interface HeadquarterRepository extends GenericRepository<HeadquarterEnti
 
     @Query("select h from " +
             "HeadquarterEntity h " +
-            "where upper(h.name) like upper(:name) and h.state = '1' ")
+            "where upper(h.shortName) like upper(:name) and h.state = '1' ")
     List<HeadquarterEntity> findLike(@Param("name") String name);
 }

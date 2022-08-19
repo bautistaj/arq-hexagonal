@@ -20,5 +20,8 @@ public class HeadquarterEntity extends GenericEntity {
     private Long id = 0L;
 
     @Size(min = 8, max = 120, message = "The min value is {min} and max {max}")
-    private String name;
+    private String shortName;
+
+    @Size(min = 8, max = 120, message = "The min value is {min} and max {max}")
+    private String largeName;
 }

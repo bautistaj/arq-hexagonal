@@ -1,5 +1,6 @@
 package com.btaj.app.rest;
 
+import com.btaj.app.dto.HeadquarterDTO;
 import com.btaj.app.entity.HeadquarterEntity;
 import com.btaj.app.rest.commons.ApiConst;
 import com.btaj.app.rest.commons.ApiEndpointConst;
@@ -27,8 +28,8 @@ public class HeadquarterRest {
     public ResponseEntity<?> findLike(@RequestParam(name = "name", defaultValue = "") String name){
         try {
 
-            List<HeadquarterEntity> lstHeadquarter =
-                    this.headquarterServiceImpl.findLike(HeadquarterEntity.builder().name(name).build());
+            List<HeadquarterDTO> lstHeadquarter =
+                    this.headquarterServiceImpl.findLike(HeadquarterDTO.builder().shortName(name).build());
 
             if(Objects.isNull(lstHeadquarter) || lstHeadquarter.isEmpty()){
                 return ResponseEntity.noContent().build();
