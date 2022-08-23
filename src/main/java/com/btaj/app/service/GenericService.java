@@ -1,4 +1,6 @@
-package com.btaj.app.service.exeption;
+package com.btaj.app.service;
+
+import com.btaj.app.service.exeption.ServiceException;
 
 import java.util.List;
 import java.util.Optional;

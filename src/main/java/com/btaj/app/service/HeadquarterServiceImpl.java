@@ -1,10 +1,11 @@
-package com.btaj.app.service.exeption;
+package com.btaj.app.service;
 
 import com.btaj.app.dto.HeadquarterDTO;
 import com.btaj.app.mapper.HeadquarterMapper;
 import com.btaj.app.persistence.QueryUtil;
 import com.btaj.app.entity.HeadquarterEntity;
 import com.btaj.app.repository.HeadquarterRepository;
+import com.btaj.app.service.exeption.ServiceException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +29,14 @@ public class HeadquarterServiceImpl implements HeadquarterService {
 
     @Override
     public Optional<HeadquarterDTO> findById(HeadquarterDTO headquarterDTO) throws ServiceException {
-        return Optional.empty();
+        try {
+
+            Optional<HeadquarterEntity> optHeadquarterEntity = headquarterRepository.findById(headquarterDTO.getId());
+            return optHeadquarterEntity.map(headquarterEntity -> headquarterMapper.toDto(headquarterEntity));
+
+        } catch (Exception exception) {
+            throw new ServiceException();
+        }
     }
 
     @Override

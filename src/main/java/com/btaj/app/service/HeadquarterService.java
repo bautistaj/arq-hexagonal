@@ -1,7 +1,6 @@
-package com.btaj.app.service.exeption;
+package com.btaj.app.service;
 
 import com.btaj.app.dto.HeadquarterDTO;
-import com.btaj.app.entity.HeadquarterEntity;
 
 public interface HeadquarterService extends GenericService<HeadquarterDTO> {
 }
