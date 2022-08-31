@@ -32,6 +32,11 @@ dependencies {
 
 	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.7.3'
+
+
+
 }
 
 tasks.named('test') {

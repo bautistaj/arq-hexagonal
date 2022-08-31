@@ -5,8 +5,6 @@ import com.btaj.app.application.ports.in.FindLikeHeadquarterUseCase;
 import com.btaj.app.domain.HeadquarterDomain;
 import com.btaj.app.adapters.in.api.rest.commons.ApiConst;
 import com.btaj.app.adapters.in.api.rest.exception.HeadquarterNotFoundException;
-import com.btaj.app.service.HeadquarterServiceV1Impl;
-import com.btaj.app.application.service.exception.ServiceException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
